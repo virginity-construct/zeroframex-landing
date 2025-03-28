@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZeroFrameX | Deploy. Dominate. Disappear.</title>
+    <style>
+        :root {
+            --primary: #00ff00;
+            --background: #000000;
+            --text: #ffffff;
+            --accent: #333333;
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 2rem;
+            --space-xl: 4rem;
+            --space-xxl: 8rem;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-family: 'Space Mono', monospace;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        header {
+            padding: var(--space-xl) 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: var(--space-md);
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: var(--space-xl);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            padding: var(--space-xxl) 0;
+        }
+        
+        .feature {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--accent);
+            padding: var(--space-lg);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        
+        .feature:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature h2 {
+            color: var(--primary);
+            margin-bottom: var(--space-md);
+            font-size: 1.5rem;
+        }
+        
+        .cta {
+            text-align: center;
+            padding: var(--space-xxl) 0;
+        }
+        
+        .button {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: var(--space-md) var(--space-lg);
+            font-family: 'Space Mono', monospace;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 255, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .button:hover::before {
+            left: 0;
+        }
+        
+        .button:hover {
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        
+        footer {
+            text-align: center;
+            padding: var(--space-xl) 0;
+            color: var(--accent);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ZeroFrameX</h1>
+            <p class="tagline">Deploy. Dominate. Disappear.</p>
+        </div>
+    </header>
+    
+    <section class="features">
+        <div class="container">
+            <div class="features">
+                <div class="feature">
+                    <h2>War-Grade Autonomy</h2>
+                    <p>Operate with complete independence in hostile environments. ZeroFrameX requires no human oversight, adapting to threats in real-time.</p>
+                </div>
+                
+                <div class="feature">
+                    <h2>Stealth Architecture</h2>
+                    <p>Leave no trace. Our proprietary cloaking systems ensure your operations remain undetected by even the most sophisticated monitoring systems.</p>
+                </div>
+                
+                <div class="feature">
+                    <h2>Modular Deployment</h2>
+                    <p>Configure ZeroFrameX to your exact specifications. Deploy only what you need, where you need it, with minimal footprint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <div class="container">
+            <a href="#" class="button">Request Access</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>© 2025 ZeroFrameX. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
