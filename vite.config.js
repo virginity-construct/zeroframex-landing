@@ -11,5 +11,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     minify: true,
+    // Ensure assets use relative paths
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
 });
